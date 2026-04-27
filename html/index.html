@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Combined Vehicle/Bike HUD</title>
+</head>
+<body>
+    <div id="vehicleHud">
+        <svg viewBox="0 0 500 500" aria-hidden="true">
+            <defs>
+                <linearGradient id="blueGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#007bff"/>
+                    <stop offset="50%" stop-color="#18baff"/>
+                    <stop offset="100%" stop-color="#007bff"/>
+                </linearGradient>
+            </defs>
+            <path class="outer-frame" d="M 81.5 391.4 A 220 220 0 1 1 418.5 391.4" />
+            <path class="outer-bottom" d="M 82 391.4 L 112 391.4 M 388 391.4 L 418 391.4" />
+            <path id="fuelRing" class="fuel-ring" d="M 104.4 372.1 A 190 190 0 1 1 395.6 372.1" />
+        </svg>
+        <div class="text-wrap">
+            <div id="vehicleSpeed">0</div>
+            <div id="vehicleUnit">KM/H</div>
+        </div>
+    </div>
+
+    <div id="bikeHud">
+        <div class="bike-device">
+            <img src="assets/bike_computer.png" alt="Bike Computer" draggable="false" />
+            <div id="bikeSpeedValue" class="lcd-value speed-value">00.0</div>
+            <div id="bikeTempValue" class="lcd-value temp-value">00.0</div>
+            <div id="bikeClockValue" class="lcd-value clock-value">00:00</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
